@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gmoralesS1.Views.vPrincipal"
+             Title="Formulario de Inscripción">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- ENCABEZADO -->
+            <VerticalStackLayout Spacing="2">
+                <Label
+                    Text="Taller Semana 1"
+                    TextColor="Red"
+                    FontSize="24"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center" />
+                <Label
+                    Text="Formulario de inscripción"
+                    TextColor="Blue"
+                    FontSize="18"
+                    HorizontalOptions="Center" />
+            </VerticalStackLayout>
+
+            <!-- DATOS PERSONALES -->
+            <Border StrokeShape="RoundRectangle 10" Stroke="LightGray" Padding="15">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Datos personales" FontAttributes="Bold" FontSize="16" />
+
+                    <Label Text="Identificación" />
+                    <Picker x:Name="pkrIdentificacion" Title="Selecciona el tipo de identificación">
+                        <Picker.Items>
+                            <x:String>Cédula</x:String>
+                            <x:String>Pasaporte</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label Text="Apellido paterno" />
+                    <Entry x:Name="entApellidoPaterno" Placeholder="Apellido paterno" />
+
+                    <Label Text="Apellido materno" />
+                    <Entry x:Name="entApellidoMaterno" Placeholder="Apellido materno" />
+
+                    <Label Text="Nombres" />
+                    <Entry x:Name="entNombres" Placeholder="Nombres completos" />
+
+                    <Label Text="Teléfono" />
+                    <Entry x:Name="entTelefono" Placeholder="Ej. 0991234567" Keyboard="Telephone" MaxLength="10" />
+
+                    <Label Text="Correo electrónico" />
+                    <Entry x:Name="entEmail" Placeholder="correo@ejemplo.com" Keyboard="Email" />
+
+                    <Label Text="Confirmar correo electrónico" />
+                    <Entry x:Name="entConfirmarEmail" Placeholder="correo@ejemplo.com" Keyboard="Email" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- DATOS ACADÉMICOS -->
+            <Border StrokeShape="RoundRectangle 10" Stroke="LightGray" Padding="15">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Datos académicos" FontAttributes="Bold" FontSize="16" />
+
+                    <Label Text="Carrera" />
+                    <Picker x:Name="pkrCarrera" Title="Selecciona una carrera">
+                        <Picker.Items>
+                            <x:String>SISTEMAS</x:String>
+                            <x:String>INFORMATICA</x:String>
+                            <x:String>MEDICINA</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label Text="Modalidad" />
+                    <Entry x:Name="entModalidad" Placeholder="Ej. Presencial" />
+
+                    <Label Text="Campus" />
+                    <Entry x:Name="entCampus" Placeholder="Ej. Matriz" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- BOTONES -->
+            <HorizontalStackLayout Spacing="15" HorizontalOptions="Center">
+                <Button x:Name="btnEnviar" Text="Enviar Inscripción" Clicked="btnEnviar_Clicked" />
+                <Button x:Name="btnLimpiar" Text="Limpiar" Clicked="btnLimpiar_Clicked" BackgroundColor="Gray" />
+            </HorizontalStackLayout>
+
+            <Label
+                x:Name="lblRutaArchivo"
+                Text=""
+                TextColor="Green"
+                FontSize="13"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

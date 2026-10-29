@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gmoralesS1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,20"
+            Spacing="25">
+            <Label
+                Text="Taller Semana 1"
+                TextColor="Red"
+                FontSize="24"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Formulario de inscripción:"
+                TextColor="Blue"
+                FontSize="16" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

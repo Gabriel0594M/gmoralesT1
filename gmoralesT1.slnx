@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="gmoralesT1.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>
